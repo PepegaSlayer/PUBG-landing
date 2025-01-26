@@ -2,13 +2,13 @@ import React from "react";
 import styles from "../Block/infoBlock.module.css";
 import buttonStyles from "../../shared-styles/buttons.module.css";
 import ListItem from "./list-item/list-item";
-import android from "../../icons/downloadAndroid.svg";
-import ios from "../../icons/downloadIos.svg";
+
 import qr from "../../icons/QR.svg";
 
 import icon1 from "../../icons/list/1.svg";
 import icon2 from "../../icons/list/2.svg";
 import icon3 from "../../icons/list/3.svg";
+import DownloadLinks from "../download-links/download-links";
 export interface InfoBlockProps {
   title: string;
   desc: string;
@@ -48,15 +48,8 @@ const ListBlock: React.FC<InfoBlockProps> = ({ title, desc }) => {
       <div className="w-[487px] text-left mt-[25px]">
         <h4 className="mb-[42px]">{title}</h4>
         <p className={`${styles.desc} mb-[74px]`}>{desc}</p>
-        <div className="flex gap-x-[16px] mb-[108px]">
-          <div className="bg-gray-dark py-[9px] px-[30px] rounded-full">
-            <img src={ios}></img>
-          </div>
-          <div className="bg-gray-dark py-[9px] px-[30px] rounded-full">
-            <img src={android}></img>
-          </div>
-        </div>
-        <div className="">
+        <DownloadLinks />
+        <div className="mt-[108px]">
           <img src={qr}></img>
         </div>
       </div>

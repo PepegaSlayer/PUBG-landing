@@ -3,7 +3,7 @@ import styles from "../Windmill/windmill.module.css";
 import buttonStyles from "../../shared-styles/buttons.module.css";
 import bgImage1 from "../../images/bg-1.png";
 import bgImage2 from "../../images/bg-2.png";
-
+import arrow from "../../icons/windmill-arrow.svg";
 import {
   AnimatePresence as OriginalAnimatePresence,
   motion,
@@ -133,7 +133,21 @@ const SecondWindmill: React.FC = () => {
       </div>
 
       <div className="relative h-[540px] flex">
-        {" "}
+        <img
+          src={arrow}
+          className="absolute right-[-50px] z-[10] top-[45%] cursor-pointer"
+          onClick={() => {
+            if (activeSlide != slides.length - 1)
+              handleSlideChange(activeSlide + 1);
+          }}
+        />
+        <img
+          src={arrow}
+          className="absolute left-[-50px] scale-x-[-1] z-[10] top-[45%] cursor-pointer"
+          onClick={() => {
+            if (activeSlide != 0) handleSlideChange(activeSlide - 1);
+          }}
+        />
         <AnimatePresence mode="wait">
           <motion.div
             key={activeButton}

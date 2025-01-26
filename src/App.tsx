@@ -18,6 +18,7 @@ import Banner from "./components/Banner/banner";
 
 import bannerIcon from "./icons/banner.svg";
 import bannerBg from "./images/banner-bg.png";
+import DownloadLinks from "./components/download-links/download-links";
 function App() {
   return (
     <div className="App">
@@ -67,12 +68,12 @@ function App() {
           titleWidth="840"
         />
         <img
-          className="z-[-1] absolute w-[981px] h-auto left-[40%] "
+          className="z-[-1] absolute w-[981px] h-auto left-[40%] top-[200px]"
           src={bgImage1}
           alt="Изображение профиелей пользователей"
         />
       </div>
-      <div className="h-[820px]"></div>
+      <div className="h-[750px]"></div>
       <InfoBlock
         title={["ПОДПИСКА ", " PREMIUM"]}
         desc={
@@ -107,13 +108,17 @@ function App() {
           tagicon={tagIcon2}
           titleWidth="620"
         />
+        <div className="mx-[310px] mt-[80px]">
+          <DownloadLinks />
+        </div>
+
         <img
           className="z-[-1] absolute w-full h-[auto] top-[250px]"
           src={bgImage2}
           alt="Изображение профиелей пользователей"
         />
       </div>
-      <div className="h-[950px]"></div>
+      <div className="h-[750px]"></div>
       <Footer />
     </div>
   );
