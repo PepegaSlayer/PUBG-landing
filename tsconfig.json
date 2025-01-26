@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "noEmit": true, //пропускать сгенерированные файлы
+    "skipLibCheck": true, //пропускать проверку библиотеки
+    "module": "CommonJS",
+    "target": "ES6",
+    "strictNullChecks": true, //присвоить null или undefined только тем переменным в которых они были объявлены
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "forceConsistentCasingInFileNames": false,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS" //выполнять ts-node в CommonJS
+    }
+  }
+}

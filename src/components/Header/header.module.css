@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 310px;
+  padding-top: 55px;
+  padding-bottom: 36px;
+  padding-inline: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 36px;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navigation a {
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #e0e0e0;
+}
+
+.blur {
+  position: absolute;
+  width: 50vw; /* 50% от ширины экрана */
+  height: 175px; /* Высота остается фиксированной */
+  top: -230px; /* Положение сверху */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%) rotate(177deg); /* Сдвигаем влево на 50% ширины и поворачиваем */
+  background: rgba(255, 255, 255, 1); /* Цвет фона */
+  filter: blur(162px); /* Размытие */
+  z-index: -1; /* Чтобы был позади основного контента */
+}

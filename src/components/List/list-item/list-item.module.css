@@ -1,0 +1,46 @@
+.container {
+  padding: 40px;
+  border-radius: 35px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.5s, outline 0.5s, padding 0.5s, z-index 0.5s,
+    height 0.5s;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.container:hover {
+  outline: 0.5px solid #ffdc10; /* Цвет при наведении */
+  background-color: rgba(19, 19, 19, 1); /* Цвет фона при наведении */
+  padding: 25px;
+  z-index: 2;
+  height: 130px;
+}
+
+.iconContainer {
+  border-radius: 100%;
+  width: 82px;
+  height: 82px;
+  margin-right: 44px;
+  outline: 1px rgba(79, 79, 79, 1) solid; /* Изначальный outline */
+  transition: outline 0.5s, background-color 0.5s; /* Плавный переход */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  margin-left: auto;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.container:hover .iconContainer {
+  outline: #ffdc10; /* Цвет outline при наведении */
+  background-color: #ffdc10; /* Цвет фона при наведении */
+}
+
+.container:hover .arrow {
+  opacity: 100;
+}

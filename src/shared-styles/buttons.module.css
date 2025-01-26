@@ -1,0 +1,15 @@
+.primary {
+  background-color: rgba(255, 220, 16, 1); /* Основной цвет */
+  color: black; /* Цвет текста */
+  padding-inline: 25px;
+  padding-block: 9px;
+  border-radius: 20px;
+}
+
+.secondary {
+  background-color: rgba(53, 53, 53, 1); /* Основной цвет */
+  color: white; /* Цвет текста */
+  padding-inline: 25px;
+  padding-block: 9px;
+  border-radius: 20px;
+}
