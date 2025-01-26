@@ -40,11 +40,6 @@ const WindmillContent: React.FC<WindmillContentProps> = ({
     >
       <img className={styles.bgImage} src={bgImage} alt="Фоновое изображение" />
       <div className="flex gap-x-[14px] mb-[72px]">
-        {/* <img
-          className={`${colorFilters[color] || ""} brightness-150`}
-          src={logoSrc}
-          alt="логотип"
-        /> */}
         <svg
           width="37"
           height="42"
@@ -69,7 +64,7 @@ const WindmillContent: React.FC<WindmillContentProps> = ({
       <div className="flex text-left mb-[76px] w-[550px]">
         {renderTitleWithHighlight()}
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <p className="text-left w-[450px]">{description}</p>
         <button
           className={`!px-[20px] !py-[10px] !rounded-full text-[16px] font-[500] bg-${color}`}
